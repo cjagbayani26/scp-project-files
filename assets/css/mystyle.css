@@ -1,0 +1,379 @@
+/* CSS FOR MY MAIN PAGE */
+:root {
+    --primary-color: #e50914;
+    --dark-color: #141414;
+}
+
+/* default styling which I learned from the videos I watched is a pretty common thing to do. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background: #000;
+    color: #999;
+}
+
+/* HEADER STYLE SECTION STARTS HERE */
+.showcase {
+    width: 100%;
+    height: 99vh;
+    /* not going for 100vh to show a bit of the lower part of the cover page */
+    position: relative;
+    background: url('../images/attic.jpg') no-repeat center center/cover;
+    /* I would have done this one in separate lines as we were taught in class but since I've learned something new from watching videos might as well try it. */
+    
+}
+
+.showcase::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
+}
+
+/* NAVIGATION BAR STYLE */
+.showcase-top {
+    position: relative;
+    z-index: 2; 
+    padding: 26px 0px 0px 55px;
+}
+
+.showcase-top #logo {
+    height: 100px;
+}
+
+/* SIGN IN BUTTON STYLE */
+.showcase-top .submit {
+    background-color: #2e2d2d;
+    color: #fff;
+    border: none;
+    padding: 5px 16px;
+    border-radius: 3px;
+    float: right;
+    position: relative;
+    right: 65px;
+}
+
+.showcase-top .submit:hover {
+    opacity: 0.9;
+}
+
+/* LANGUAGE SELECTION STYLE */
+.showcase-top select {
+    background-color: transparent;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px 10px;
+    float: right;
+    position: relative;
+    right: 85px;
+}
+
+.showcase-top select option {
+    color: #000000;
+}
+
+/* LET'S GO */
+.showcase .lets-go-container {
+    z-index: 2;
+    position: relative;
+    top: 180px;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.45);
+}
+.showcase .lets-go-container h1, p {
+    color: #fff;
+}
+
+.showcase .lets-go-container h1 {
+    font-weight: 700;
+    font-size: 3.8rem;
+}
+
+.showcase .lets-go-container .para-1 {
+    color: crimson;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.showcase .lets-go-container button {
+    padding: 22px;
+    border: none;
+    background-color: #ef0914;
+    color: #fff;
+    margin-left: -0.3%;
+    font-weight: 600;
+    border-radius: 3px;   
+}
+
+.showcase .lets-go-container button:hover {
+    opacity: 0.9;
+}
+
+/*ABOUT SECTION*/
+section{
+    background-color: #000;
+    padding: 4.5rem 0 1.5rem;
+} 
+
+.heading {
+    color: white;
+    margin-left: 16%;
+    max-width: 600px;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-bottom: 4px solid #e50914;
+}
+
+section p {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+    text-align: justify;
+    font-size: 1.6rem;
+    padding: 1rem;
+    color: #999
+}
+
+/* FOOTER SECTION STARTS */
+footer{
+    background-color: black;
+    border-top: 8px solid #222;
+    padding-top: 3%;
+}
+footer h5{
+    color: #999;
+    text-align: center;
+    padding-bottom: 1%;
+}
+  footer .content{
+    max-width: 1350px;
+    margin: 0px 90px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer .content .box{
+    width: 20%;
+    transition: all 0.4s ease;
+  }
+  footer .content p{
+    text-align: justify;
+    color: #999;
+  }
+  footer .content .middle{
+    padding-left: 70px;
+  }
+  footer .content .middle a{
+    line-height: 30px;
+    color: #999;
+    text-decoration: none;
+  }
+  footer .content .middle a:hover{
+      text-decoration: underline;
+  }
+
+  .copyright {
+    background: #000;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+/* RESPONSIVE CSS CODE FOR SMALLER SCREENS OR DEVICES */
+@media(max-width: 943px) {
+    /* LET'S GO */
+    .showcase .lets-go-container {
+        position: relative;
+        top: 90px;
+    }
+    .showcase .lets-go-container h1 {
+        font-size: 3.4rem;
+    }
+    .showcase .lets-go-container .para-1 {
+        font-size: 1.5rem;
+    }
+    .showcase .lets-go-container button {
+        display: block;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 1.5%;
+        padding: 12px;
+    }
+
+    /* LET'S GO */
+    .showcase .lets-go-container {
+        position: relative;
+        top: 60px;
+    }
+    .showcase .lets-go-container h1 {
+        font-size: 2rem;
+        padding: 50px;
+        padding-bottom: 0px;
+    }
+    .showcase .lets-go-container .para-1 {
+        font-size: 1.4rem;
+    }
+    .hide.sm {
+        display: none;
+    }
+}
+
+@media(max-width: 659px){
+    .showcase-top{
+        padding: 26px 0px 0px 25px;
+    }
+    .showcase-top #logo{
+        height: 25px;
+    }
+    .showcase-top .submit{
+        position: relative;
+        right: 25px;
+        padding: 2px 10px;
+    }
+    .showcase-top select{
+        position: relative;
+        right: 40px;
+        padding: 2px 10px;
+    }
+
+    .heading {
+        font-size: 1.8rem;
+        max-width: 350px;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}
+
+/* NAVIGATION BAR */
+@media(max-width: 346px) {
+    .showcase-top #logo{
+        height: 25px;
+    }
+    .showcase-top .submit{
+        padding: 1px 5px;
+    }
+    .showcase-top select{
+        padding: 1px 0px;
+        position: relative;
+        right: 30px;
+    }
+
+    .heading {
+        font-size: 1rem;
+    }
+
+    section p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:414px) {
+    .heading {
+        color: white;
+        margin-left: 15%;
+        max-width: 290px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 3px solid #e50914;
+    }
+    
+    section p {
+        width: 70%;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 2rem;
+        text-align: justify;
+        font-size: 1rem;
+        padding: 1rem;
+        color: #999
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}
+
+@media (max-width:375px) {
+    .heading {
+        color: white;
+        margin-left: 16%;
+        max-width: 300px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        border-bottom: 3px solid #e50914;
+    }
+    
+    section p {
+        width: 70%;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 2rem;
+        text-align: justify;
+        font-size: 1rem;
+        padding: 1rem;
+        color: #999
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}
+
+@media (max-width:360px) {
+    .heading {
+        color: white;
+        margin-left: 21%;
+        max-width: 220px;
+        font-size: 1.1rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        border-bottom: 3px solid #e50914;
+    }
+    
+    section p {
+        width: 70%;
+        margin: auto;
+        overflow: hidden;
+        padding: 0 2rem;
+        text-align: justify;
+        font-size: .8rem;
+        padding: 1rem;
+        color: #999
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+}
